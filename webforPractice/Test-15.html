@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>時鐘</title>
+<script>
+function showTime(){
+	var today = new Date();
+	document.getElementById("timePanel").innerHTML = 
+	today.getHours()+":"+today.getMinutes()+":"+today.getSeconds();
+}
+
+function init(){
+	showTime();
+	//不可設var 設為global
+	timerId = window.setInterval(showTime,1000);
+}
+
+
+window.onload = init;
+</script>
+</head>
+
+<body>
+<div>現在時刻:<span id="timePanel" style="color:deepPink;font-weight:bold"></span>
+</div>
+<input type="button" value="pause" onclick="window.clearInterval(timerId)">
+</body>
+</html>

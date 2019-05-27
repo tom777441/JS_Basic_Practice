@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>checkedId</title>
+<script>
+function check(){
+	
+	var idNo = document.getElementsByName("idno")[0].value;
+	if(idNo.length != 10) {
+		alert("長度必須為10");
+		return;
+	}
+	//小寫字母轉大寫
+	idNo = idNo.toUpperCase();
+	//檢查第一碼
+	var firstCode = idNo.charAt(0);
+	
+	if(firstCode <65 || firstCode>90){
+		alert("第一碼須為英文字母");
+		return;
+	}
+	//檢查第二碼
+	if(idNo.charAt(1) !=1 && idNo.charAt(1) !=2){
+		alert("第二碼須為1或2");
+		return;
+	}
+}
+</script>
+</head>
+
+<body>
+生分證字號:<input type="text" id="idno" name="idno">
+<input type="submit" onclick='check()'>
+
+
+</body>
+</html>

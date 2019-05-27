@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>navigator應用</title>
+<!--- 跨平台相容--->
+<script>
+function fading(){
+	var img1 = document.getElementById("img1");
+	if(navigator.appName =="Microsoft Internet Explorer")
+		image.style.filter ="alpha(opacity=50)";
+	else
+		img1.style.opacity = 0.5;
+}
+</script>
+</head>
+
+<body>
+<input type="button" value="刷淡" onclick="fading()"><br>
+<img src ="moriarty.jpg" id="img1">
+<h3>此圖僅供學術使用，若有侵權還請通知下架<h3>
+</body>
+</html>

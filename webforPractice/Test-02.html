@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>變數轉型</title>
+</head>
+
+<body>
+
+總價<input type = "text" id="subTotal" value="200" name = "subTotal"><br>
+<h2> =======錯誤<h2>
+<script>
+//須強制轉Int否則14行res強制轉字串res=20050
+var subTotal = parseInt(document.getElementById("subTotal").value); 
+var fee =50;
+var total = subTotal+fee;
+document.write("總價:",subTotal,"<br>");
+document.write("處理費用:",fee,"<br>");
+document.write("應付總額:",total,"<br>");
+</script>
+
+<h2> =======parseInt(資料,基底)<h2>
+<script>
+var subTotal = document.getElementById("subTotal").value;
+
+document.write("總價10:",parseInt(subTotal),"<br>");
+document.write("總價16:",parseInt(subTotal,16),"<br>");
+document.write("總價8:",parseInt(subTotal,8),"<br>");
+document.write("總價2:",parseInt(subTotal,2),"<br>");
+</script>
+</body>
+
+</html>

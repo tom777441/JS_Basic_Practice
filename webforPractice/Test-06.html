@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>事件是否向上傳遞</title>
+</head>
+
+<body>
+
+<p>Welcome to JS ~~Body
+<p>Welcome to JS ~~Body
+<p>Welcome to JS ~~Body
+
+<form onclick = "window.alert('form被點按')">
+	<p>I lovo JS ~~Form
+	<p>I lovo JS ~~Form
+	<p>I lovo JS ~~Form</p>
+    <input type="button" name="btn" value="click me" onclick="window.alert('button被點按')
+    ;event.cancelBubble = true;">
+ <!--- 
+    event.cancelBubble 設定事件不向上傳遞
+ -->
+ </form>
+</body>
+</html>

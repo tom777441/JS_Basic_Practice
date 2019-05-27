@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JS事件註冊</title>
+<script>
+function showAns(){
+	var a=10; 
+	var b=20; 
+	window.alert(a+b);
+}
+</script>
+</head>
+
+<!---
+showAns()執行結果, HTML註冊方式
+showAns程序,JavaScript註冊方式 
+--->
+<body>
+<input type= "button" name="btn" value="10+20=?" onclick="showAns()">
+<p>
+<input type= "button" name="btn" value="10+20=?" >
+<script>
+document.getElementsByName("btn")[1].onclick = showAns;
+</script>
+</body>
+</html>

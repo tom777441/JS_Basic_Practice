@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>RegExp物件應用</title>
+</head>
+
+<body>
+<p>Click the button to do a global search for "is" in a string</p>
+<button onclick="btn()">Try it!</button>
+<p id="demo"><p>
+
+<script>
+function btn(){
+	var str = "Is this all there is?";
+	var patt1 = /is/g;  //[h]/g :找h  [a|i|h]:找a or i or h
+	var result = str.match(patt1);
+	document.getElementById("demo").innerHTML = result + "</br>" + result.length;
+	
+}
+</script>
+</body>
+</html>

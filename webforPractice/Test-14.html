@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>查詢資料</title>
+<script>
+function prodQuery(){
+	var psn = window.prompt("請輸入欲查詢的書號:")
+	if(psn != null){
+		var ans = window.confirm("確定查詢書號" + psn + "嗎?");
+		if(ans == true){
+			alert("確定查詢");
+		}
+	}
+	
+}
+</script>
+</head>
+
+<body>
+<h2>查詢書籍資料</h2>
+<input type="button" value="查詢" onclick="prodQuery()">
+</body>
+</html>

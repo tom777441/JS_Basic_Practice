@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>圖檔檢查</title>
+<!--- 此案例為從後面檢查的case-->
+<script>
+function check(){
+	//取得上傳圖檔名稱
+	var fileName = document.getElementsByName("photo")[0].value;
+	
+	//找出字串中小數點的位置
+	var start = fileName.lastIndexOf(".")+1;
+	
+	if(start ==0){
+		alert("檔案格式不明，請重新挑選");
+	}
+	//從小數點的後一個字元開始到字串的最後，取一個子字串
+	var ext = fileName.substring(start,fileName.length);
+	var imageAry = new Array("bmp","jpg","gif","png","jpeg")//,"非法格式");
+	ext =ext.toLowerCase();
+	/*
+	for(var i =0;i<imageAry.length;i++){
+		if(ext ==imageAry[i]){
+		alert(ext);
+		break;
+		}
+		if(i ==imageAry.length-1)
+		alert(imageAry[i]);
+	}*/
+	var found = false;
+	for(i in imageAry){
+		if(ext == imageAry[i])
+			found = true;
+	}
+		if(found ==false){
+			alert("檔案格式錯誤")
+		}else{
+		alert(ext);
+		}
+}
+</script>
+</head>
+
+<body>
+<form action="Test-08.html" method = "post" enctype="multipart/form-data">
+<input type= "file" name="photo">
+
+<input type="submit" value="送出" onclick = "check()">
+</body>
+</html>
