@@ -23,7 +23,7 @@ Test-11 : 隨機驗證碼
 
 Test-12 : RegExp物件應用
 
-Test-13 : regExp驗證idno(身分證判斷)
+Test-13 : RegExp驗證idno(身分證判斷)
 
 Test-14 : 查詢資料
 
